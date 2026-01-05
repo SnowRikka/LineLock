@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Column Selector 设置</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>LineLock</h1>
+      <p class="subtitle">列选择工具</p>
+    </header>
+
+    <section class="setting-group">
+      <div class="setting-item">
+        <label class="setting-label">启用插件</label>
+        <label class="switch">
+          <input type="checkbox" id="enabled" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting-item">
+        <label class="setting-label" for="triggerKey">触发方式</label>
+        <select id="triggerKey">
+          <option value="Ctrl+Alt" selected>Ctrl + Alt</option>
+          <option value="Alt+Shift">Alt + Shift</option>
+          <option value="Ctrl+Shift">Ctrl + Shift</option>
+          <option value="MiddleButton">鼠标中键</option>
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label class="setting-label" for="highlightColor">高亮颜色</label>
+        <input type="color" id="highlightColor" value="#0078d7">
+      </div>
+    </section>
+
+    <section class="usage">
+      <h2>使用方法</h2>
+      <ol>
+        <li>按住 <kbd id="keyHint">Ctrl + Alt</kbd></li>
+        <li>鼠标左键点击起始位置</li>
+        <li>上下拖动选择同列字符</li>
+        <li>松开后自动复制到剪贴板</li>
+      </ol>
+    </section>
+
+    <footer>
+      <span class="version">v1.0.0</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

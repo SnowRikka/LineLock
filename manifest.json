@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "LineLock",
+  "description": "像代码编辑器一样按列选择网页文本",
+  "version": "1.0.0",
+  "permissions": [
+    "storage",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
